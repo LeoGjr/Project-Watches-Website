@@ -1,0 +1,109 @@
+/*=============== HOME ===============*/
+.home{
+   &__container,
+   &__data,
+   &__content,
+   &__images,
+   &__info-content{
+      display: grid;
+   }
+   &__container{
+      padding-block: 9rem 3rem;
+      row-gap: 3rem;
+   }
+   &__data{
+      text-align: center;
+      row-gap: 3.5rem;
+   }
+   &__content{
+      row-gap: .75rem;
+   }
+   &__stars{
+      display: flex;
+      column-gap: .25rem;
+      justify-content: center;
+   }
+   &__title{
+      font-size: var(--h1-font-size);
+      color: var(--title-color);
+   }
+   &__price{
+      font-size: var(--h3-font-size);
+   }
+   &__button{
+      border: 1px solid var(--text-color);
+      padding: 1rem 1.5rem;
+      justify-self: center;
+      color: var(--title-color);
+      font-size: var(--small-font-size);
+      letter-spacing: 3px;
+      font-weight: var(--font-semi-bold);
+      display: inline-flex;
+      align-items: center;
+      column-gap: 1.5rem;
+      transition: border-color .4s;
+
+      & i{
+         font-size: 1.25rem;
+      }
+      &:hover{
+         border-color: var(--title-color)
+      }
+   }
+   &__images{
+      position: relative;
+   }
+   &__img{
+      width: 180px;
+      margin-inline: auto;
+   }
+   &__info{
+      display: flex;
+      align-items: center;
+      column-gap: .75rem;
+      margin-top: 2rem;
+
+      &-img{
+         width: 120px;
+      }
+      &-content{
+         row-gap: 1.5rem;
+      }
+      &-description{
+         font-size: var(--small-font-size);
+      }
+   }
+   &__button-link{
+      color: var(--text-color);
+      font-size: var(--small-font-size);
+      font-weight: var(--font-semi-bold);
+      letter-spacing: 3px;
+      justify-self: flex-start;
+      transition: color .4s;
+
+      &:hover{
+         color: var(--title-color);
+      }
+   }
+}
+
+/* Swiper class */
+.swiper{
+   margin-inline: initial;
+
+   &-pagination-bullets.swiper-pagination-horizontal{
+      bottom: -2rem;
+   }
+   &-pagination-bullet{
+      width: 1rem;
+      height: .15rem;
+      border-radius: 0;
+      background-color: var(--text-color);
+      opacity: 1;
+      transition: background-color .3s, width .3s;
+   }
+   &-pagination-bullet-active{
+      width: 1.5rem;
+      background-color: var(--title-color);
+   }
+}
